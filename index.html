@@ -1,13 +1,19 @@
-<script src="
-https://cdn.jsdelivr.net/npm/@babel/plugin-syntax-jsx@7.25.9/lib/index.min.js
-"></script>
-
-
-
-Babel.transform("<h1>123</h1>", {
-                  presets: ['es2015'],
-plugins: ["@babel/plugin-syntax-jsx"]
-                }).code;
-
-
-  <script src="https://unpkg.com/@babel/standalone@7.21.3/babel.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- <script src="https://unpkg.com/@babel/plugin-syntax-jsx@7.25.9/lib/index.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone@7.21.3/babel.min.js"></script>
+    <script>
+        console.log(
+            Babel.transform("<h1>123</h1>", {
+                presets: ['es2015'],
+                plugins: ["syntax-jsx"]
+            }).code
+        );
+    </script>
+</body>
+</html>
